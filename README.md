@@ -3,7 +3,7 @@ A web service that shows on a map where movies have been filmed in the San Franc
 
 Networking:
   - Project URL: https://calm-anchorage-13250.herokuapp.com
-  >> Kindly take a look at my another project:  https://multi-user-blog-160020.appspot.com/blog
+  > Kindly take a look at my another project:  https://multi-user-blog-160020.appspot.com/blog
                                                
 
 # Tech Stack:
