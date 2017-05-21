@@ -1,0 +1,137 @@
+body {
+  padding: 50px;
+  font-family: "Indie Flower", cursive;
+  font-size: 30px;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+  background: #43AA8B;
+  height: 70px;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 50;
+  width: 100%;
+  color: #fff;
+  padding-left: 20px;
+}
+
+.menu {
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  z-index: 10;
+  background: #f7f7f7;
+  top: 70px;
+  max-height: 90%;
+  overflow: scroll;
+  padding: 30px;
+  opacity: 0.7;
+}
+
+#search {
+  position: absolute;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 200px;
+  margin: 10px 0 0 20px;
+  height: 25px;
+  font-size: 15px;
+  outline: none;
+}
+
+
+#map {
+  height: 100%;
+  position: relative; 
+}
+a {
+  color: #00B7FF;
+}
+
+
+.toggle_switch {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+  margin-top:90px;
+}
+
+.nav-pills {
+  display: flex;
+  justify-content: center;
+  font-size: 10px;
+  margin-bottom: 3px; 
+}
+
+.nav>li>a {
+  padding: 10px 15px;
+}
+
+.input {
+  position: absolute;
+  z-index: 10;
+  width: 85%;
+  margin-left: -5%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#movies {
+  list-style: none;
+  margin-left: 5%;
+  margin-top: 95%;
+}
+
+#movies li {
+  padding: 15px 0 15px 12px;
+  font-size: 15px;
+  font-weight: bold;
+  border-bottom: 1px solid #333;
+  cursor: pointer;
+}
+
+#movies li:hover {
+  border-bottom: 3px solid #333;
+}
+
+.gm-style .gm-style-iw {
+    background-color: #7D7D7F !important;
+    font-family: "Indie Flower", cursive;
+    border: 2px solid #43AA8B;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 200px !important;
+    min-width: 150px !important;
+    color: #fff;
+    padding: 10px 10px 0 10px;
+    display: block !important;
+    z-index: 100;
+    margin-right: 20px;
+ }   
+
+.gm-style .gm-style-iw img {
+	width: 100px;
+	height: 80px;
+	margin-top: -70px;
+	margin-left: 70px;
+}
+
+/*style the arrow*/
+.gm-style div div div div div div div div {
+    background-color: #7D7D7F !important;
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    color: #fff;
+    font-size: 16px;
+    z-index: 10;
+} 
