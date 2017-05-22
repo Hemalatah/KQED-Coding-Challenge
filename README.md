@@ -31,6 +31,19 @@ Networking:
 
   - Node and NPM is used as a package manager
   - Gulp is used as a task runner, helps in css, js minification, browser sync and linting.
+
+# File Structure:
+  - server.js is the root file (configuring ports and triggering up the backend file)
+  - app.js runs on express.js helps to collaborate things together in Front end and Back end.
+  - movie.json has the json formatted data about the movies
+  - geocoding.js helps to find out the geo location based on the location given in movie.json
+  - geo_movie.json same as movie.json with additional geo data
+  - test folder has test.js file which does mocha testing along with supertest module
+  - static folder has all the necessary css and js files. In that movie.js gives the interactivity for the website.
+  - views folder has the handlebars.js files required for HTML formatting
+  - routes folder has the functionality for url routing
+  - dist folder has all the files needed for production env.
+
   
 # Future Work
   - use the postgreSQL database
