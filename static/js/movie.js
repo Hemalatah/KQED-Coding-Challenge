@@ -1,16 +1,9 @@
 $(document).ready(function(){
-	// Initialize Firebase
-	var config = {
-	apiKey: "AIzaSyCBMDlFFcJ0OtLP1zK5wdcPB8OXpjUyc3E",
-	authDomain: "sf-movie-1495312209329.firebaseapp.com",
-	databaseURL: "https://sf-movie-1495312209329.firebaseio.com",
-	projectId: "sf-movie-1495312209329",
-	storageBucket: "sf-movie-1495312209329.appspot.com",
-	messagingSenderId: "148800737602"
-	};
-	firebase.initializeApp(config);
+	
 	// list of google map markers
 	var markers = [];
+
+	var infowindow;
 
 	var searchByMovie = true;
 
@@ -29,7 +22,7 @@ $(document).ready(function(){
 
 	// add markers and info windows in the map
 	function addMarker(result, option) {
-		var infowindow = new google.maps.InfoWindow();
+		infowindow = new google.maps.InfoWindow();
 
 		var marker = new google.maps.Marker({
 		    position: {
@@ -69,7 +62,7 @@ $(document).ready(function(){
 		map.panBy(0, -100);
 	}
 
-	$.when().then(function() {
+	function loadMap() {
 		var src = "{{#each titles}}" + 
 	      		  "<li><a class = 'text-capitalize' href='#''>{{this}}</a></li>" +
 	      		  "{{/each}}";
@@ -105,6 +98,21 @@ $(document).ready(function(){
 				//TODO
 			}
 		});
+	};
+
+	$.when().then( function() {
+		// make sure all the already opened infowindow are closed
+		console.log(infowindow);
+		if (infowindow) {
+			infowindow.close(infowindow);
+		}
+		loadMap();
+	});
+
+	// refresh the saerch button
+	$(".remove").on('click', function() {
+		$('input').val('');
+		loadMap();
 	});
 
 
@@ -151,11 +159,7 @@ $(document).ready(function(){
 	//Display selected auto complete pins
 	resultsContainer.on('click', 'li', function (event) {
 		var title = $(event.target).text();
-		if (searchByMovie) {
-			titleParam.val(title);
-		} else {
-			directorParam.val(title);
-		}
+		titleParam.val(title);
 		markers.forEach(function (marker) {
 			if (marker.title !== title) {
 				marker.setMap(null);
