@@ -2,7 +2,9 @@
 A web service that shows on a map where movies have been filmed in the San Francisco Bay Area.
 
 Networking:
-  - Project URL: http://ec2-34-205-26-212.compute-1.amazonaws.com/
+  - Project URL: https://calm-anchorage-13250.herokuapp.com
+  > Kindly take a look at my another project:  https://multi-user-blog-160020.appspot.com/blog
+                                               
 
 # Tech Stack:
 ```sh
