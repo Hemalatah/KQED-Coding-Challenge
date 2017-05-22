@@ -22,7 +22,7 @@ header {
 
 .menu {
   position: absolute;
-  width: 300px;
+  width: 25%;
   height: 100%;
   z-index: 10;
   background: #f7f7f7;
@@ -76,6 +76,7 @@ input {
   list-style: none;
   margin-left: 5%;
   margin-top: 95%;
+  min-width: 100%;
 }
 
 #movies li {
@@ -124,4 +125,28 @@ input {
     color: #fff;
     font-size: 16px;
     z-index: 10;
-} 
+}
+
+@media all and (max-width: 1000px) {
+  #movies {
+    margin-top: 120%;
+    min-width: 70%;
+  }
+}
+
+@media all and (max-width: 800px) {
+  #movies {
+    margin-top: 150%;
+    margin-left: 2%;
+    min-width: 25%;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .remove {
+    margin-left: 5%;
+  }
+  #movies {
+    visibility: hidden;
+  }
+}
