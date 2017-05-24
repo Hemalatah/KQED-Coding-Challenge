@@ -5,8 +5,6 @@ $(document).ready(function(){
 
 	var infowindow;
 
-	var searchByMovie = true;
-
 	var resultsContainer = $('[data-container=results]');
 
 	var titleParam = $('[data-query-param="title_name"]');
